@@ -20,6 +20,8 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 
-Original rat texture by sirrobzeroone under CC0, subsequently altered
-New guinea pig textures by DrBlebbins under CC0
+Original rat texture by sirrobzeroone under CC0, subsequently altered.
 
+New guinea pig textures by DrBlebbins under CC3.0 https://creativecommons.org/licenses/by/3.0/legalcode
+
+Guinea pig sounds by Daniel Simon under CC3.0 https://creativecommons.org/licenses/by/3.0/legalcode No changes were made

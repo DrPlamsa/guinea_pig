@@ -19,7 +19,7 @@ mobs:register_mob("guinea_pig:guinea_pig", {
 	},
 	makes_footstep_sound = false,
 	sounds = {
-		random = "mobs_rat",
+		random = "guinea_pig",
 	},
 	walk_velocity = 1,
 	run_velocity = 2,
