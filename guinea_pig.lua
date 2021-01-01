@@ -43,7 +43,7 @@ mobs:register_mob("guinea_pig:guinea_pig", {
 		{"dryplants:hay", "air", -1},
 		{"default:dirt_with_grass", "default:dirt", -2},
 	},
-	stay_near = {"farming:straw", 10}, {"dryplants:hay", 10},
+	stay_near = {{"farming:jackolantern_on"}, 10},
 	fear_height = 2,
 	on_rightclick = function(self, clicker)
 
