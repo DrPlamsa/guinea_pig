@@ -16,6 +16,7 @@ mobs:register_mob("guinea_pig:guinea_pig", {
 	textures = {
 		{"guinea_pig.png"},
 		{"guinea_pig2.png"},
+		{"guinea_pig3.png"},
 	},
 	makes_footstep_sound = false,
 	sounds = {
