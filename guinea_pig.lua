@@ -37,10 +37,11 @@ mobs:register_mob("guinea_pig:guinea_pig", {
 		"default:grass_1", "dryplants:hay"
 	},
 	view_range = 8,
-	replace_rate = 20,
+	replace_rate = 80,
 	replace_what = {
 		{"group:flora", "air", -1},
 		{"dryplants:hay", "air", -1},
+		{"air", "guinea_pig:pellets", -1},
 		{"default:dirt_with_grass", "default:dirt", -2},
 	},
 	stay_near = {{"farming:jackolantern_on"}, 10},
@@ -53,6 +54,15 @@ mobs:register_mob("guinea_pig:guinea_pig", {
 		if mobs:capture_mob(self, clicker, 90, 90, 0, true) then return end
 
 
+	end,
+
+	on_replace = function(self, pos, oldnode, newnode)
+
+		-- Prevent a guinea pig from producing pellets on top of air (floating). Gotta be on top of dirt or dirt with grass.
+		local myPos = self.object:get_pos()
+		myPos.y = myPos.y - 2.0
+		local myNode = minetest.get_node(myPos)
+		return (myNode.name == "default:dirt_with_grass") or (myNode.name == "default:dirt")
 	end,
 
 
@@ -90,6 +100,30 @@ minetest.register_craft({
 
 mobs:register_egg("guinea_pig:guinea_pig", "Guinea pig", "mobs_rat_inv.png")
 
+minetest.register_node("guinea_pig:pellets", {
+	description = "Guinea pig pellets",
+	inventory_image = "farming_cotton_seed.png",
+	wield_image = "farming_cotton_seed.png",
+	paramtype = "light",
+	sunlight_propagates = true,
+	tiles = {"farming_cotton_seed.png"},
+	drawtype = "nodebox",
+	node_box = {
+	    type = "fixed",
+        fixed = {-0.5   , -0.5   , -0.5   ,   0.5   , -0.4375,  0.5   },
+    },
+	groups = {snappy=3, flammable=2},
+})
 
+-- mulch
+minetest.register_craft({
+	type = "shapeless",
+	output = "bonemeal:mulch 4",
+	recipe = {
+		"guinea_pig:pellets", "guinea_pig:pellets", "guinea_pig:pellets", 
+		"guinea_pig:pellets", "guinea_pig:pellets", "guinea_pig:pellets", 
+		"guinea_pig:pellets", "guinea_pig:pellets", "guinea_pig:pellets", 
+	}
+})
 
 
