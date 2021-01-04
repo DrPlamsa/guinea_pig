@@ -20,8 +20,10 @@ mobs:register_mob("guinea_pig:guinea_pig", {
 	},
 	makes_footstep_sound = false,
 	sounds = {
+--		random = {"guinea_pig_burble","guinea_pig_wheek"},
 		random = "guinea_pig_burble",
-		jump = "guinea_pig_wheek",
+		distance = 5,
+--		jump = "guinea_pig_wheek",
 	},
 	walk_velocity = 1,
 	run_velocity = 2,
