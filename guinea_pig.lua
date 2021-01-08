@@ -101,7 +101,7 @@ minetest.register_craft({
 })
 
 
-mobs:register_egg("guinea_pig:guinea_pig", "Guinea pig", "mobs_rat_inv.png")
+mobs:register_egg("guinea_pig:guinea_pig", "Guinea pig", "guinea_pig_inv.png")
 
 minetest.register_node("guinea_pig:pellets", {
 	description = "Guinea pig pellets",
